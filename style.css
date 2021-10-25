@@ -18,6 +18,8 @@
 .btn-default {
   color: #F2F2F2;
   background: #D92323;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -44,6 +46,10 @@ p.result-text span {
   padding: 0 15%;
 }
 
+.result-list {
+  padding-bottom: 60px;
+}
+
 .result-item {
   margin: 0 30px;
   margin-bottom: 20px;
@@ -62,6 +68,8 @@ h2.result-item__title {
   font-size: 21px;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -72,6 +80,8 @@ h2.result-item__title::after {
   top: 50%;
   font-size: 32px;
   line-height: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -82,21 +92,29 @@ h2.result-item__title:hover {
 .result-item__content {
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s ease;
+  -o-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s ease;
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s ease;
 }
 
 .result-item--active h2.result-item__title {
   color: #A6121F;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 
 .result-item--active h2.result-item__title::after {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
   
 .result-item--active .result-item__content {
   max-height: 2000px !important;
   padding-bottom: 25px;
+  -webkit-transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease;
+  -o-transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease;
   transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease;
 }
 
