@@ -1,0 +1,136 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-wrapper {
+  padding: 5% 15%;
+}
+
+.form__input {
+  border: 2px solid #F2F2F2;
+  padding: 20px;
+}
+
+.btn {
+  padding: 20px;
+}
+
+.btn-default {
+  color: #F2F2F2;
+  background: #D92323;
+  transition: .3s;
+}
+
+.btn-default:hover {
+  background: #A6121F;
+}
+
+p.result-text {
+  display: none;
+  padding: 20px 0 0;
+  color: #b2b2b2;
+}
+
+p.result-text.result-text--active {
+  display: block;
+}
+
+p.result-text span {
+  color: #000;
+}
+
+.result-wrapper {
+  margin: 0 -30px;
+  padding: 0 15%;
+}
+
+.result-item {
+  margin: 0 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.result-item:nth-child(1) {
+  padding-top: 20px;
+  border-top: 1px solid #b2b2b2;
+}
+
+h2.result-item__title {
+  position: relative;
+  padding-right: 40px;
+  font-size: 21px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+h2.result-item__title::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 32px;
+  line-height: 0;
+  transition: .3s;
+}
+
+h2.result-item__title:hover {
+  color: #A6121F;
+}
+
+.result-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding-bottom 0.5s ease;
+}
+
+.result-item--active h2.result-item__title {
+  color: #A6121F;
+  transition: color 0.5s ease;
+}
+
+.result-item--active h2.result-item__title::after {
+  transform: rotate(45deg);
+}
+  
+.result-item--active .result-item__content {
+  max-height: 2000px !important;
+  padding-bottom: 25px;
+  transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease;
+}
+
+.result-item__author {
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+span.result-item__date {
+  color: #bcbcbc;
+}
+
+@media screen and (max-width: 1200px) {
+  .result-wrapper {
+    margin: 0;
+  }
+
+  .result-item {
+    margin: 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h2.result-item__title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    padding: 5%;
+  }
+
+  .result-wrapper {
+    padding: 0 5%;
+  }
+}
